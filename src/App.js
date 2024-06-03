@@ -1,25 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
+import { Container } from "react-bootstrap";
+import LocalStorageExample from "./components/examples/LocalStorageExample";
+import DialogExample from "./components/examples/DialogExample";
+import AutoFilterDropdownExample from "./components/examples/AutoFilterDropdownExample";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="d-flex vh-100">
+      <Container className="my-auto">
+        <h1 className="mb-5">React Level 3 Certification Exam</h1>
+        <div className="mb-4">
+          <LocalStorageExample />
+        </div>
+        <div className="mb-4">
+          <DialogExample />
+        </div>
+        <div>
+          <AutoFilterDropdownExample />
+        </div>
+      </Container>
     </div>
   );
-}
+};
 
 export default App;
