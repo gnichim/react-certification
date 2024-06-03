@@ -1,5 +1,8 @@
 import React, { createContext, useContext, useState } from "react";
+
 const DialogContext = createContext();
+
+export const useDialog = () => useContext(DialogContext);
 
 export const DialogProvider = ({ children }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -12,8 +15,4 @@ export const DialogProvider = ({ children }) => {
       {children}
     </DialogContext.Provider>
   );
-};
-
-export const useDialog = () => {
-  return useContext(DialogContext);
 };
